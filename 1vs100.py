@@ -377,11 +377,12 @@ def life_show():
 
 def poll():#версия одного, написать
     global stadiya
-    stadiya = q_stage.poll
-    mb.showinfo("Выберите ответ")
-    poll_the_mob["state"] = "disabled"
-    life_hide()
-    #acc()
+    if (stadiya == q_stage.default):
+        stadiya = q_stage.poll
+        mb.showinfo("Выберите ответ")
+        poll_the_mob["state"] = "disabled"
+        life_hide()
+        #acc()
 
 
 def ask():#версия двух, написать
